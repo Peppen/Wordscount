@@ -1,0 +1,297 @@
+---Time Log File---
+---2 Process(es) working on 1 file(s) containing 100182 lines---
+Average Global Time for Wordcounting -> 95.656340
+---2 Process(es) working on 1 file(s) containing 100182 lines---
+Average Global Time for Wordcounting -> 95.721025
+---2 Process(es) working on 1 file(s) containing 100182 lines---
+Average Global Time for Wordcounting -> 97.912715
+---2 Process(es) working on 1 file(s) containing 100182 lines---
+Average Global Time for Wordcounting -> 42.743295
+---2 Process(es) working on 1 file(s) containing 100182 lines---
+Average Global Time for Wordcounting -> 102.005444
+---2 Process(es) working on 1 file(s) containing 100182 lines---
+Average Global Time for Wordcounting -> 105.398267
+---2 Process(es) working on 1 file(s) containing 100182 lines---
+Average Global Time for Wordcounting -> 42.127037
+---2 Process(es) working on 1 file(s) containing 100182 lines---
+Average Global Time for Wordcounting -> 31.390552
+---1 Process(es) working on 1 file(s) containing 100182 lines---
+Average Global Time for Wordcounting -> 27.038575
+---4 Process(es) working on 1 file(s) containing 100182 lines---
+Average Global Time for Wordcounting -> 101.689408
+---2 Process(es) working on 1 file(s) containing 100182 lines---
+Average Global Time for Wordcounting -> 101.006443
+---2 Process(es) working on 1 file(s) containing 100182 lines---
+Average Global Time for Wordcounting -> 100.235102
+---2 Process(es) working on 1 file(s) containing 100182 lines---
+Average Global Time for Wordcounting -> 98.784184
+---2 Process(es) working on 1 file(s) containing 100182 lines---
+Average Global Time for Wordcounting -> 102.337358
+---2 Process(es) working on 1 file(s) containing 100182 lines---
+Average Global Time for Wordcounting -> 106.112575
+---2 Process(es) working on 1 file(s) containing 100182 lines---
+Average Global Time for Wordcounting -> 113.790356
+---2 Process(es) working on 1 file(s) containing 100182 lines---
+Average Global Time for Wordcounting -> 90.314932
+---2 Process(es) working on 1 file(s) containing 100182 lines---
+Average Global Time for Wordcounting -> 88.867547
+---2 Process(es) working on 1 file(s) containing 100182 lines---
+Average Global Time for Wordcounting -> 102.431573
+---2 Process(es) working on 1 file(s) containing 100182 lines---
+Average Global Time for Wordcounting -> 111.094081
+---2 Process(es) working on 1 file(s) containing 100182 lines---
+Average Global Time for Wordcounting -> 101.056453
+---2 Process(es) working on 1 file(s) containing 100182 lines---
+Average Global Time for Wordcounting -> 92.181405
+---2 Process(es) working on 1 file(s) containing 100182 lines---
+Average Global Time for Wordcounting -> 86.461112
+---2 Process(es) working on 1 file(s) containing 100182 lines---
+Average Global Time for Wordcounting -> 85.915300
+---2 Process(es) working on 1 file(s) containing 100182 lines---
+Average Global Time for Wordcounting -> 87.259092
+---2 Process(es) working on 1 file(s) containing 100182 lines---
+Average Global Time for Wordcounting -> 81.255035
+---2 Process(es) working on 1 file(s) containing 100182 lines---
+Average Global Time for Wordcounting -> 96.490991 seconds
+---2 Process(es) working on 1 file(s) containing 100182 lines---
+Average Global Time for Wordcounting -> 100.515448 seconds
+---1 Process(es) working on 2 file(s) containing 19026 lines---
+Average Global Time for Wordcounting -> 8.033777 seconds
+---2 Process(es) working on 0 file(s) containing 0 lines---
+Average Global Time for Wordcounting -> 0.000000 seconds
+---2 Process(es) working on 2 file(s) containing 19026 lines---
+Average Global Time for Wordcounting -> 8.345656 seconds
+---2 Process(es) working on 2 file(s) containing 19026 lines---
+Average Global Time for Wordcounting -> 7.973059 seconds
+---2 Process(es) working on 2 file(s) containing 19026 lines---
+Average Global Time for Wordcounting -> 7.878890 seconds
+---2 Process(es) working on 2 file(s) containing 19026 lines---
+Average Global Time for Wordcounting -> 4.828567 seconds
+---2 Process(es) working on 1 file(s) containing 15327 lines---
+Average Global Time for Wordcounting -> 2.987489 seconds
+---2 Process(es) working on 2 file(s) containing 19026 lines---
+Average Global Time for Wordcounting -> 5.060913 seconds
+---2 Process(es) working on 2 file(s) containing 19026 lines---
+Average Global Time for Wordcounting -> 7.801487 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 36.099692 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 107.348219 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 104.285383 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 95.740690 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 35.219585 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 88.453077 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 40.435756 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 37.455618 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 40.568503 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 39.094143 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 41.039512 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 36.998432 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 39.902409 seconds
+---1 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 37.336761 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 37.022491 seconds
+---1 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 36.873681 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 37.880813 seconds
+---1 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 36.673605 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 38.693858 seconds
+---1 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 42.152601 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 40.972256 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 38.478057 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 39.514124 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 37.691070 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 42.459521 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 38.752480 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 37.961403 seconds
+---1 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 36.884230 seconds
+---3 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 4.795838 seconds
+---4 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 6.664024 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 12.444913 seconds
+---3 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 5.206198 seconds
+---8 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 13.210576 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 12.512960 seconds
+---1 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 11.789024 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 12.612672 seconds
+---1 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 12.140515 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 12.449008 seconds
+---3 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 5.190590 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 12.606034 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 39.281716 seconds
+---1 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 37.101866 seconds
+---3 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 15.861036 seconds
+---8 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 41.873183 seconds
+---3 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 16.435151 seconds
+---3 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 15.422467 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 39.588025 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 10.086403 seconds
+---1 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 9.654224 seconds
+---3 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 16.878796 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 10.535198 seconds
+---1 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 10.206562 seconds
+---3 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 17.544696 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 11.264319 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 3.416903 seconds
+---4 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 5.789653 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 3.460978 seconds
+---1 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 3.417028 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 1.540450 seconds
+---1 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 4.634208 seconds
+---4 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 0.519311 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 3.296438 seconds
+---1 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 3.504699 seconds
+---4 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 5.691502 seconds
+---1 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 3.273849 seconds
+---8 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 8.789414 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 5.509905 seconds
+---1 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 3.314774 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 12.537479 seconds
+---1 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 12.698035 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 12.520576 seconds
+---1 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 13.647827 seconds
+---3 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 5.053711 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 43.239807 seconds
+---1 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 41.091624 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 41.938760 seconds
+---3 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 17.191978 seconds
+---1 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 36.747709 seconds
+---4 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 22.837006 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 0.322713 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 0.309882 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 37.919954 seconds
+---1 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 38.504072 seconds
+---3 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 16.502705 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 41.474565 seconds
+---3 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 17.159839 seconds
+---7 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 45.960928 seconds
+---1 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 44.663437 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 42.309628 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 13.605044 seconds
+---1 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 14.039085 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 12.073087 seconds
+---4 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 6.499359 seconds
+---8 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 14.252144 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 43.835359 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 41.372514 seconds
+---3 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 16.068169 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 40.606072 seconds
+---1 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 37.442343 seconds
+---3 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 16.773264 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 38.371933 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 37.337804 seconds
+---8 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 41.239816 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 39.394347 seconds
+---8 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 41.254160 seconds
+---8 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 40.343637 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 94.468322 seconds
+---1 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 88.282941 seconds
+---8 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 91.288185 seconds
+---2 Process(es) working on 3 file(s) containing 44550 lines---
+Average Global Time for Wordcounting -> 38.235054 seconds
+---2 Process(es) working on 2 file(s) containing 29223 lines---
+Average Global Time for Wordcounting -> 22.432776 seconds

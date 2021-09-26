@@ -78,16 +78,16 @@ L'algoritmo è stato testato attraverso 4 istanze AWS EC2 *m4.xlarge*; i files i
 <br> Ogni test è stato eseguito 10 volte per ogni possibile combinazione in input di grandezza e numero di processori; i risultati sono stati rappresentati sotto forma di grafo.
 
 ### Strong Scalability
-![Strong Scalability](https://github.com/Peppen/Wordcount/blob/main/figures/Strong_Scalability.png)
+![Strong Scalability](https://github.com/Peppen/Wordscount/blob/main/figures/Strong_Scalability.png)
 Il grafo mostra come i tempi di esecuzione diminuiscono all'aumentare del numero di processori stabilizzandosi su una media che varia in base alla dimensione dei file sottoposti ai test. <br>
 Quando la dimensione dell'input aumenta, si arriva ad un picco di miglioramento del tempo di esecuzione del 38%, ottenuto utilizzando 16 processori mentre con il passaggio dall'esecuzione sequenziale all'esecuzione parallela(con soli 2 processori) si ottiene un miglioramento del 33.5%.
-![Efficiency_Strong](https://github.com/Peppen/Wordcount/blob/main/figures/Efficiency_Strong.png)
+![Efficiency_Strong](https://github.com/Peppen/Wordscount/blob/main/figures/Efficiency_Strong.png)
 Il grafo mostra come l'efficienza tende ad decrescere all'aumentare del numero dei processori ma decresce più lentamente quando la dimensione dei file cresce; si nota come su file di piccola dimensione(100KB) decresce più velocemente rispetto a file di dimensione maggiore(250KB, 500KB e 750KB) mentre meno velocemente ma non troppo nei file di dimensione 1MB.
-![SpeedUp](https://github.com/Peppen/Wordcount/blob/main/figures/SpeedUp.png)
+![SpeedUp](https://github.com/Peppen/Wordscount/blob/main/figures/SpeedUp.png)
 Questo grafo mostra come le performance migliorano all'aumentare della size dell'input ed all'aumentare del numero di processori. Si nota come, dati tutte le dimensioni degli input, lo speed sia super lineare, aspetto che si nota man mano che la dimensione degli input cresce.
 
 ## Weak Scalability
-![Weak_Scalability](https://github.com/Peppen/Wordcount/blob/main/figures/Weak_Scalability.png)
+![Weak_Scalability](https://github.com/Peppen/Wordscount/blob/main/figures/Weak_Scalability.png)
 Il grafo mostra un buon comportamento dell'algoritmo; infatti i tempi di esecuzione non variano molto tra i processori essendo che ricevono tutti la stessa mole di lavoro. <br>
-![Efficiency_Weak](https://github.com/Peppen/Wordcount/blob/main/figures/Efficiency_Weak.png)
+![Efficiency_Weak](https://github.com/Peppen/Wordscount/blob/main/figures/Efficiency_Weak.png)
 Anche per quanto riguarda l'efficienza l'algoritmo ha un buon comportamento nonostante per diversi input abbia dei picchi improvvisi.

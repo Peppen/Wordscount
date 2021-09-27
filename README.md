@@ -33,7 +33,7 @@ Per eseguire il programma tramite un cluster AWS di istanze EC2:
 * Installare su ogni istanza l'ambiente Ubuntu 18.04
 * Dopo l'installazione di Ubuntu, eseguire l'installazione di OpenMPI 4.0
 * Tramite il MASTER installare sui nodi Slave sia l'ambiente Ubuntu 18.04 sia OpenMPI 4.0
-* Inviare al MASTER node scelto l'eseguibile *main* ed i file sul quale si vuole eseguire il Word Counting
+* Inviare al MASTER node scelto l'eseguibile *wordscount* ed i file sul quale si vuole eseguire il Word Counting
   * Nel nostro caso è stata inviata la cartella [*files*](https://github.com/Peppen/Wordscount/tree/main/files) contenente tutti i file su cui è stato testato lo script
 * Copiare i files su pcpc@MASTER dove MASTER è l'indirizzo IP privato del nodo MASTER
 * Da pcpc@MASTER bisognerà inviare sia l'eseguibile sia i file ad ogni slave tramite il comando `scp FILE_NAME pcpc@masterIP`

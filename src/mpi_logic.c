@@ -87,3 +87,14 @@ void count_words(occurrence **maps, chunk *chunks, int myChunkNumber, char *dirP
   	} 
 }
 
+void change(word **list, occurrence *occurrences) {
+  int words = getWordsNumber(occurrences);
+  *list = (word *)calloc(words, sizeof(word));
+  occurrence *pointer = occurrences;
+  for (int i = 0; i < words; i++) {
+    (*list)[i] = pointer->word;
+    pointer = pointer->next;
+  }
+}
+
+

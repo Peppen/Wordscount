@@ -9,19 +9,6 @@
 #define FILE_LOCATION "../files/"
 #define MASTER 0
 
-word *createMaps(int words, occurrence *occurrences) {
-  word *maps = (word *)calloc(words, sizeof(word));
-  occurrence *pointer = occurrences;
-  
-  for (int i = 0; i < words; i++) {
-    maps[i] = pointer->word;
-    pointer = pointer->next;
-  }
-  
-  return maps; 
-}
-
-
 int main(int argc, char *argv[]) {
   	double startTime = MPI_Wtime(), average = 0;
   	int totalLines = 0, totalWords = 0;
@@ -32,7 +19,7 @@ int main(int argc, char *argv[]) {
   	MPI_Datatype MPI_CHUNK, MPI_WORD;
   	file *fileNames;
   	chunk *chunks, *myChunks;
-  	word *maps;
+  	word *gatherMaps, *maps;
   	occurrence *occurrences;
 
   	MPI_Init(&argc, &argv);
@@ -84,15 +71,16 @@ int main(int argc, char *argv[]) {
     		count_words(&occurrences, myChunks, myChunkNumber, dirPath);
     		  
     		int myWordNumber = getWordsNumber(occurrences);
-    		maps = createMaps(myWordNumber, occurrences);
+    		change(&maps, occurrences);
     
     		if (p != 1) {
       			if (rank == MASTER) {
         			receiving = (int *) calloc(p, sizeof(int));
+        			gatherMaps = (word *)calloc(myWordNumber, sizeof(word));
         			displRcv = (int *) calloc(p, sizeof(int));
       			}
       			MPI_Gather(&myWordNumber, 1, MPI_INT, receiving, 1, MPI_INT, 0, MPI_COMM_WORLD);
-      			MPI_Gatherv(maps, myWordNumber, MPI_WORD, maps, receiving, displRcv, MPI_WORD, 0, MPI_COMM_WORLD);
+      			MPI_Gatherv(maps, myWordNumber, MPI_WORD, gatherMaps, receiving, displRcv, MPI_WORD, 0, MPI_COMM_WORLD);
     		}
     
     		double finalTime = MPI_Wtime() - startTime;
@@ -105,7 +93,13 @@ int main(int argc, char *argv[]) {
     		
 
     		if(rank == MASTER) {
-      			wordcount_info(maps, totalWords);
+    			// Writing words count on file 
+      			printf("Writing on file %s\n", FILE_OUTPUT);
+      			FILE *f = fopen(FILE_OUTPUT, "w");
+      			fprintf(f, "---Collected Data after WordsCount---\n");
+      			for (int i = 0; i < myWordNumber; i++) 
+			        fprintf(f, "Word: %s -> Occurrence: %ld\n", maps[i].word, maps[i].occurrences);
+			// Writing time info on file
       			time_info(p, fileNumber, totalLines, average);
     		}
   	} else {

@@ -15,3 +15,4 @@ int getWordsNumber(occurrence *words);
 void createWordDatatype(MPI_Datatype *wordData);
 void toLower(char *s);
 void del(char *line);
+void change(word **maps, occurrence *occurrences);

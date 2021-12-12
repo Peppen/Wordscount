@@ -28,6 +28,7 @@ counter *divideLines(file *fileNames, int fileNumber, int totalLines, int worker
   	int remainder = totalLines % workers;
 
   	int next = standard;
+  	
   	if (remainder > 0) {
     		next++;
     		remainder--;

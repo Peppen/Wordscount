@@ -3,15 +3,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-void wordcount_info(word *maps, int words) {
-      printf("Writing on file %s\n", FILE_OUTPUT);
-      FILE *f = fopen(FILE_OUTPUT, "w");
-      fprintf(f, "---Collected Data after WordsCount---\n");
-      for (int i = 0; i < words; i++)
-        fprintf(f, "Word: %s -> Occurrence: %ld\n", maps[i].word, maps[i].occurrences);
-}
-
-
 void time_info(int p, int fileNumber, int totalLines, double time) {
       printf("Writing on file %s\n", TIME_FILE);
       FILE *f = fopen(TIME_FILE, "a");

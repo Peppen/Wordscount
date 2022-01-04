@@ -56,45 +56,46 @@ void count_words(occurrence **maps, chunk *chunks, int myChunkNumber, char *dirP
       			fgets(wordBuf, LINE_LIMIT, fp);
     		}
 
-    	while((fscanf(fp, "%s", wordBuf)) != EOF) {
-      		if (strcmp(wordBuf, "") != 0) {
-        		toLower(wordBuf);
-        		del(wordBuf);
-        		if (*maps == NULL) {
-          			*maps = (occurrence *) malloc(sizeof(occurrence));
-          			strcpy((*maps)->word.word, wordBuf);
-          			(*maps)->word.occurrences = 1;
-          			(*maps)->next = NULL;
-        		} else {
-          			occurrence *mapPointer = *maps;
-          			while (strcmp(mapPointer->word.word, wordBuf) != 0 && mapPointer->next != NULL) {
-            				mapPointer = mapPointer->next;
-          			}
-          			if (strcmp(mapPointer->word.word, wordBuf) != 0) {
-            				mapPointer->next = (occurrence *) malloc(sizeof(occurrence));
-            				mapPointer = mapPointer->next;
-            				strcpy(mapPointer->word.word, wordBuf);
-            				mapPointer->word.occurrences = 1;
-            				mapPointer->next = NULL;
-          			} else {
-            				mapPointer->word.occurrences++;
-          			}
-        		}
-    		}	
-  	}
-    	fclose(fp);
-    	free(fileFullName);
+    		while((fscanf(fp, "%s", wordBuf)) != EOF) {
+      			if (strcmp(wordBuf, "") != 0) {
+        			toLower(wordBuf);
+        			del(wordBuf);
+        			if (*maps == NULL) {
+          				*maps = (occurrence *) malloc(sizeof(occurrence));
+          				strcpy((*maps)->word.word, wordBuf);
+          				(*maps)->word.occurrences = 1;
+          				(*maps)->next = NULL;
+        			} else {
+          				occurrence *mapPointer = *maps;
+          				while (strcmp(mapPointer->word.word, wordBuf) != 0 && mapPointer->next != NULL) {
+            					mapPointer = mapPointer->next;
+          				}
+          				if (strcmp(mapPointer->word.word, wordBuf) != 0) {
+            					mapPointer->next = (occurrence *) malloc(sizeof(occurrence));
+            					mapPointer = mapPointer->next;
+            					strcpy(mapPointer->word.word, wordBuf);
+            					mapPointer->word.occurrences = 1;
+            					mapPointer->next = NULL;
+          				} else {
+            					mapPointer->word.occurrences++;
+          				}
+        			}
+    			}	
+  		}
+    		fclose(fp);
+    		free(fileFullName);
   	} 
 }
 
 void change(word **list, occurrence *occurrences) {
-  int words = getWordsNumber(occurrences);
-  *list = (word *)calloc(words, sizeof(word));
-  occurrence *pointer = occurrences;
-  for (int i = 0; i < words; i++) {
-    (*list)[i] = pointer->word;
-    pointer = pointer->next;
-  }
+  	int words = getWordsNumber(occurrences);
+  	printf("Number of words: %d\n", words);
+  	*list = (word *)calloc(words, sizeof(word));
+  	occurrence *pointer = occurrences;
+  	for (int i = 0; i < words; i++) {
+    		(*list)[i] = pointer->word;
+    		pointer = pointer->next;
+  	}
 }
 
 

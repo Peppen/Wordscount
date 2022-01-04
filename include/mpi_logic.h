@@ -1,4 +1,4 @@
-#include "mpi_helper.h"
+#include "mpi_chunk.h"
 
 typedef struct Word {
   char word[LINE_LIMIT];

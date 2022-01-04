@@ -5,7 +5,7 @@ Il Wordcount indica il numero di parole in un documento o in un file testuale; v
 Tre fasi sono stati necessarie per questa implementazione:
 - Nella prima fase il nodo MASTER legge l'elenco dei file (o una directory), che conterrà i nomi di tutti i file da contare; in questo caso MASTER è l'unico nodo a leggere l'elenco dei file. Di ogni file vengono calcolate le linee da cui è composto in modo da dividerle per ogni processo; in seguito il MASTER invia ai processi chunks, strutture dotate del nome del file e dell'inizio e la fine delle linee su cui deve lavorare; quindi ogni processo riceve un numero totale di linee dato da questo stesso numero diviso il numero di processori totali, il tutto racchiuso in una serie di chunks. Ogni processo in seguito eseguirà il Word Counting delle sue linee ed alla fine produrrà un istogramma locale.
 - Durante la seconda fase si combinano le frequenze delle parole attraverso i processi.
-- Nell'ultima fase ciascuno dei processi invia i propri istogrammi locali al processo MASTER che ha solo bisogno di raccogliere tutte queste informazioni. In seguito il MASTER salva tutte queste informazioni in un file testuale(.txt) con le parole e le frequenze ordinate, e salva i tempi di esecuzione in un file testuale(.txt).
+- Nell'ultima fase ciascuno dei processi invia i propri istogrammi locali al processo MASTER che ha solo bisogno di raccogliere tutte queste informazioni. In seguito il MASTER salva tutte queste informazioni in un file testuale(.txt) con le parole e le frequenze ordinate, e salva i tempi di esecuzione in un secondo file testuale(.txt).
 
 ## Implementazione
 Per questa implementazione sono state necessarie i seguenti file C:

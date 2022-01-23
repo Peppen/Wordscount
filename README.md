@@ -1,17 +1,6 @@
 # MPI-Wordcount
 Il Wordcount indica il numero di parole in un documento o in un file testuale; viene utilizzato quando è necessario che un testo rimanga entro un numero specifico di parole, ciò accade tipicamente nel mondo accademico, nei procedimenti legali, nel giornalismo e nella pubblicità. Esso viene utilizzato dai traduttore per determinare il prezzo di un lavoro di traduzione; può essere utilizzato anche per calcolare le misure di leggibilità e per misurare la velocità di digitazione e lettura (di solito in parole al minuto). È stata implementata una versione di map-reduce usanto MPI per eseguire il Word Counting su un enorme numero di files.
 
-## Soluzione
-Tre fasi sono stati necessarie per questa implementazione:
-- Nella prima fase il nodo MASTER legge l'elenco dei file presenti in una directory, esso è l'unico nodo a leggere l'elenco dei file. In seguito, di ogni file vengono calcolate le linee da cui è composto in modo da dividerle per ogni processo in modo tale che il MASTER possa inviare ai processi dei chunks, strutture dotate del nome del file e dell'inizio e la fine delle linee su cui deve lavorare; il numero totale di linee ricevute da ogni processo sarà dato da questo stesso numero diviso il numero di processori totali, il tutto racchiuso in una serie di chunks. Ogni processo in seguito eseguirà il Word Counting delle sue linee ed alla fine produrrà una mappa locale.
-- Durante la seconda fase si combinano le frequenze delle parole attraverso i processi.
-- Nell'ultima fase ciascuno dei processi invia le proprie mappe locali al processo MASTER che ha solo bisogno di raccogliere tutte queste informazioni e salvarle in un file testuale(.txt) con le parole e le frequenze ordinate; i tempi di esecuzione verranno salvati in seguito in un secondo file testuale(.txt).
-
-## Implementazione
-* La soluzione sequenziale è banale: un solo processore legge tutti i file presenti nella directory da analizzare ed esegue il wordcounting di ognuno.
-* Per quanto riguarda la soluzione sequenziale, sono state necessarie tre fasi:
-    *  Il nodo MASTER legge l'elenco dei file presenti in una directory, esso è l'unico nodo a leggere l'elenco dei file. In seguito, di ogni file vengono calcolate le linee da cui è      composto in modo da dividerle per ogni processo in modo tale che il MASTER possa inviare ai processi dei chunks, strutture dotate del nome del file e dell'inizio e la fine delle      linee su cui oguno dei processi deve lavorare; il numero totale di linee ricevute da ogni processo sarà dato da questo stesso numero diviso il numero di processori totali, il        tutto racchiuso in una serie di chunks. Il numero di chunks che ogni processo dovrebbe ricevere viene inviato tramite una *Mpi_Scatter()* ed essi vengono inviati tramite una          *Mpi_Scatterv()*. Ogni processo in seguito eseguirà il Word Counting delle sue linee ed alla fine produrrà una mappa locale.
-
 ## Struttura della soluzione
 L'implementazione del programma ha previsto la seguente struttura dotata dei seguenti file C:
 * [*mpi_chunk.c*](https://github.com/Peppen/Wordscount/tree/main/src/mpi_chunk.c): associato all'header file [*mpi_chunk.h*](https://github.com/Peppen/Wordscount/blob/main/include/mpi_chunk.h), contiene la funzione *createChunkDatatype(MPI_Datatype \*chunkData)* per la creazione dell'MPI_Datatype chunkData, una funzione *getChunksNumber(counter \*chunkList)* che ritorna il numero di chunks ed una funzione *\*divideLines(file \*fileNames, int fileNumber, int totalLines, int workers)* per la suddivisione delle linee di parole estratte dai file da dividere per ogni processore che ritorna una struttura counter.
@@ -24,6 +13,14 @@ L'implementazione del programma ha previsto la seguente struttura dotata dei seg
    * La struttura *Occurrence* contiene un word ed un puntatore alla prossima Occurrence.
    * La struttura *Chunk* contiene un array di char, corrispondente al nome del file, e due int, uno corrispondente alla *startLine* ed un altro corrispondente all'*endLine* del        file.
 * [*main.c*](https://github.com/Peppen/Wordscount/blob/main/src/main.c): contiene il main di esecuzione dell'algoritmo. Il processo MASTER legge tutti i file contenuti nella directory [*files*](https://github.com/Peppen/Wordscount/tree/main/files) e calcola il numero totale di linee da inviare ad ogni processore sotto forma di chunk. Se il numero di processori è maggiore di uno, quindi non siamo in un'esecuzione sequenziale, si esegue una MPI_Scatter() ed in seguito una MPI_Scatterv(); una volta inviati i chunks ad ogni processore, ognuno di loro può eseguire il Word Counting. I dati raccolti da ogni processore possono essere uniti tramite la chiamata di una MPI_Gather() ed in seguito di una MPI_Gatherv(). Per il calcolo dei tempi di esecuzione dell'algoritmo, tramite una MPI_Reduce vengono sommati i tempi di esecuzione di ogni processore ed in seguito divisi per il numero di processori totali.
+
+## Implementazione
+* La soluzione sequenziale è banale: un solo processore legge tutti i file presenti nella directory da analizzare ed esegue il wordcounting di ognuno.
+* Per quanto riguarda la soluzione sequenziale, sono state necessarie tre fasi:
+    *  Il nodo MASTER legge l'elenco dei file presenti in una directory, esso è l'unico nodo a leggere l'elenco dei file. In seguito, di ogni file vengono calcolate le linee da cui è      composto in modo da dividerle per ogni processo in modo tale che il MASTER possa inviare ai processi dei chunks, strutture dotate del nome del file e dell'inizio e la fine delle      linee su cui oguno dei processi deve lavorare; il numero totale di linee ricevute da ogni processo sarà dato da questo stesso numero diviso il numero di processori totali, il        tutto racchiuso in una serie di chunks. Il numero di chunks che ogni processo dovrebbe ricevere viene inviato tramite una *Mpi_Scatter()* ed essi vengono inviati tramite una          *Mpi_Scatterv()*. 
+    *  Durante la seconda fase ogni processo eseguirà il Word Counting delle sue linee ed alla fine produrrà una mappa locale.
+    *  Nell'ultima fase ogni processo invia al master la dimensione di ogni mappa che dovrebbe aspettarsi con una *MPI_Gather()*; ogni mappa verrà inviata poi con una                        *MPI_Gatherv()*. Il Master alla fine ha solo bisogno di raccogliere tutte queste informazioni e salvarle in un file testuale(.txt) con le parole e le frequenze ordinate; i            tempi di esecuzione verranno salvati in seguito in un secondo file testuale(.txt).
+
 ## Esecuzione
 Sia per la creazione dell'eseguibile sia per l'esecuzione del programma è stato creato un [*Makefile*](https://github.com/Peppen/Wordscount/blob/main/src/Makefile):
 - Eseguendo il comando `make` viene creato l'eseguibile sotto il nome di [**wordscount**](https://github.com/Peppen/Wordscount/blob/main/src/wordscount),
@@ -85,11 +82,13 @@ L'algoritmo è stato testato attraverso 4 istanze AWS EC2 *m4.xlarge*; i files i
 * *Weak Scalability*: la dimensione del problema (carico di lavoro) assegnata a ciascun elemento di elaborazione rimane costante e vengono utilizzati elementi aggiuntivi per risolvere un problema più ampio.
 
 <br> Ogni test è stato eseguito 10 volte per ogni possibile combinazione in input di grandezza e numero di processori; i risultati sono stati rappresentati sotto forma di grafo.
+* L'asse X rappresenta il numero di processi utilizzati.
+* L'asse Y rappresenta il tempo di esecuzione calcolato in millisecondi(ms).
 
 ### Strong Scalability
 ![Strong Scalability](https://github.com/Peppen/Wordscount/blob/main/figures/Strong_Scalability.png)
 Il grafo mostra come i tempi di esecuzione diminuiscono all'aumentare del numero di processori stabilizzandosi su una media che varia in base alla dimensione dei file sottoposti ai test. <br>
-Quando la dimensione dell'input aumenta, si arriva ad un picco di miglioramento del tempo di esecuzione del 38%, ottenuto utilizzando 16 processori mentre con il passaggio dall'esecuzione sequenziale all'esecuzione parallela(con soli 2 processori) si ottiene un miglioramento del 33.5%.
+Il comportamento descescente è corretto dato che mantenere fisso l'input implica che ogni processo riceverà meno lavoro all'aumentare del numero di processi totali.
 ![Efficiency_Strong](https://github.com/Peppen/Wordscount/blob/main/figures/Efficiency_Strong.png)
 Il grafo mostra come l'efficienza tende ad decrescere all'aumentare del numero dei processori ma decresce più lentamente quando la dimensione dei file cresce; si nota come su file di piccola dimensione(100KB) decresce più velocemente rispetto a file di dimensione maggiore(250KB, 500KB e 750KB) mentre meno velocemente ma non troppo nei file di dimensione 1MB.
 ![SpeedUp](https://github.com/Peppen/Wordscount/blob/main/figures/SpeedUp.png)

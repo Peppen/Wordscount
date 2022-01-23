@@ -16,5 +16,4 @@ typedef struct Counter {
 
 counter *divideLines(file *fileNames, int fileNumber, int totalLineNumber, int p);
 int getChunksNumber(counter *chunkList);
-chunk *createChunkList(int size, counter *chunkList);
 void createChunkDatatype(MPI_Datatype *chunkData);

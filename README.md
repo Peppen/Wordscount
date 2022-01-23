@@ -8,7 +8,12 @@ Tre fasi sono stati necessarie per questa implementazione:
 - Nell'ultima fase ciascuno dei processi invia le proprie mappe locali al processo MASTER che ha solo bisogno di raccogliere tutte queste informazioni e salvarle in un file testuale(.txt) con le parole e le frequenze ordinate; i tempi di esecuzione verranno salvati in seguito in un secondo file testuale(.txt).
 
 ## Implementazione
-Per questa implementazione sono state necessari i seguenti file C:
+* La soluzione sequenziale è banale: un solo processore legge tutti i file presenti nella directory da analizzare ed esegue il wordcounting di ognuno.
+* Per quanto riguarda la soluzione sequenziale, sono state necessarie tre fasi:
+    *  Il nodo MASTER legge l'elenco dei file presenti in una directory, esso è l'unico nodo a leggere l'elenco dei file. In seguito, di ogni file vengono calcolate le linee da cui è      composto in modo da dividerle per ogni processo in modo tale che il MASTER possa inviare ai processi dei chunks, strutture dotate del nome del file e dell'inizio e la fine delle      linee su cui oguno dei processi deve lavorare; il numero totale di linee ricevute da ogni processo sarà dato da questo stesso numero diviso il numero di processori totali, il        tutto racchiuso in una serie di chunks. Il numero di chunks che ogni processo dovrebbe ricevere viene inviato tramite una *Mpi_Scatter()* ed essi vengono inviati tramite una          *Mpi_Scatterv()*. Ogni processo in seguito eseguirà il Word Counting delle sue linee ed alla fine produrrà una mappa locale.
+
+## Struttura della soluzione
+L'implementazione del programma ha previsto la seguente struttura dotata dei seguenti file C:
 * [*mpi_chunk.c*](https://github.com/Peppen/Wordscount/tree/main/src/mpi_chunk.c): associato all'header file [*mpi_chunk.h*](https://github.com/Peppen/Wordscount/blob/main/include/mpi_chunk.h), contiene la funzione *createChunkDatatype(MPI_Datatype \*chunkData)* per la creazione dell'MPI_Datatype chunkData, una funzione *getChunksNumber(counter \*chunkList)* che ritorna il numero di chunks ed una funzione *\*divideLines(file \*fileNames, int fileNumber, int totalLines, int workers)* per la suddivisione delle linee di parole estratte dai file da dividere per ogni processore che ritorna una struttura counter.
    * La stuttura *Counter* contiene un oggetto *file*, due int, uno corrispondente alla *startLine* ed un altro corrispondente all'*endLine* di un file, e un puntatore al prossimo oggetto Counter.
    * La struttura *FileName* contiene un char corrispondente al nome del file ed il numero di linee di quel file. 

@@ -94,7 +94,7 @@ Il grafo mostra come l'efficienza tende ad decrescere all'aumentare del numero d
 ![SpeedUp](https://github.com/Peppen/Wordscount/blob/main/figures/SpeedUp.png)
 Questo grafo mostra come le performance migliorano all'aumentare della size dell'input ed all'aumentare del numero di processori. Si nota come, dati tutte le dimensioni degli input, lo speed sia super lineare, aspetto che si nota man mano che la dimensione degli input cresce.
 
-## Weak Scalability
+### Weak Scalability
 ![Weak_Scalability](https://github.com/Peppen/Wordscount/blob/main/figures/Weak_Scalability.png)
 Il grafo mostra un buon comportamento dell'algoritmo; infatti i tempi di esecuzione non variano molto tra i processori essendo che ricevono tutti la stessa mole di lavoro. <br>
 ![Efficiency_Weak](https://github.com/Peppen/Wordscount/blob/main/figures/Efficiency_Weak.png)

@@ -72,18 +72,3 @@ counter *divideLines(file *fileNames, int fileNumber, int totalLines, int worker
   	
   	return count;
 }
-
-chunk *createChunkList(int chunksNumber, counter *count) {
-	chunk *buffer = calloc(chunksNumber, sizeof(chunk));
-	counter *pointer = count;
-	
-	for(int i=0; i<chunksNumber; i++) {
-		strcpy(buffer[i].fileName, pointer->fileName->fileName);
-    		buffer[i].startLine = pointer->startLine;
-    		buffer[i].endLine = pointer->endLine;
-    		pointer = pointer->next;
-    	}
-    	
-    	return buffer;
-
-}

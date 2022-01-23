@@ -53,8 +53,16 @@ int main(int argc, char *argv[]) {
       			printf("Total lines: %d\n", totalLines);
       			printf("Each process will work on %d lines\n\n", totalLines / p);
       			counter *count = divideLines(fileNames, fileNumber, totalLines, p);
+      			// To not modify count we have to instantiate this counter
+      			counter *tempCount = count;
       			int size = getChunksNumber(count);
-   			chunks = createChunkList(size, count);
+      			chunks = calloc(size, sizeof(chunk));
+      			for(int i=0; i < size; i++) {
+				strcpy(chunks[i].fileName, tempCount->fileName->fileName);
+    				chunks[i].startLine = tempCount->startLine;
+    				chunks[i].endLine = tempCount->endLine;
+    				tempCount = tempCount->next;
+    			}  	
       			if(count == NULL) 
       				check = 0;
       			else {
@@ -91,7 +99,12 @@ int main(int argc, char *argv[]) {
     		count_words(&occurrences, myChunks, myChunkNumber, dirPath);
     		  
     		int myWordNumber = getWordsNumber(occurrences);
-    		change(&maps, occurrences);
+    		occurrence *tempOccurrence = occurrences;
+    		maps = calloc(myWordNumber, sizeof(word));
+    		for (int i = 0; i < myWordNumber; i++) {
+    			(maps)[i] = tempOccurrence->word;
+    			tempOccurrence = tempOccurrence->next;
+  		}
     
     		if (p != 1) {
       			if (rank == MASTER) {

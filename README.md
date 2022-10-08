@@ -89,13 +89,9 @@ L'algoritmo è stato testato attraverso 4 istanze AWS EC2 *m4.xlarge*; i files i
 ![Strong Scalability](https://github.com/Peppen/Wordscount/blob/main/figures/Strong_Scalability.png)
 Il grafo mostra come i tempi di esecuzione diminuiscono all'aumentare del numero di processori stabilizzandosi su una media che varia in base alla dimensione dei file sottoposti ai test. <br>
 Il comportamento descescente è corretto dato che mantenere fisso l'input implica che ogni processo riceverà meno lavoro all'aumentare del numero di processi totali.
-![Efficiency_Strong](https://github.com/Peppen/Wordscount/blob/main/figures/Efficiency_Strong.png)
-Il grafo mostra come l'efficienza tende ad decrescere all'aumentare del numero dei processori ma decresce più lentamente quando la dimensione dei file cresce; si nota come su file di piccola dimensione(100KB) decresce più velocemente rispetto a file di dimensione maggiore(250KB, 500KB e 750KB) mentre meno velocemente ma non troppo nei file di dimensione 1MB.
 ![SpeedUp](https://github.com/Peppen/Wordscount/blob/main/figures/SpeedUp.png)
 Questo grafo mostra come le performance migliorano all'aumentare della size dell'input ed all'aumentare del numero di processori. Si nota come, dati tutte le dimensioni degli input, lo speed sia super lineare, aspetto che si nota man mano che la dimensione degli input cresce.
 
 ### Weak Scalability
 ![Weak_Scalability](https://github.com/Peppen/Wordscount/blob/main/figures/Weak_Scalability.png)
 Il grafo mostra un buon comportamento dell'algoritmo; infatti i tempi di esecuzione non variano molto tra i processori essendo che ricevono tutti la stessa mole di lavoro. <br>
-![Efficiency_Weak](https://github.com/Peppen/Wordscount/blob/main/figures/Efficiency_Weak.png)
-Anche per quanto riguarda l'efficienza l'algoritmo ha un buon comportamento nonostante per diversi input abbia dei picchi improvvisi.
